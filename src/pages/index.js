@@ -17,12 +17,13 @@ export default function Home() {
   useEffect(() => {
 
     console.log('timeline running')
-    const tl1 = gsap.timeline({delay: .5});
-    tl1.set(".home-text", { visibility: 'visible'})
+    const tl1 = gsap.timeline({delay: .5, y: 100});
 
-    tl1.from(".home-text", {
-      y: -100,
-      autoAlpha: 0,
+
+    tl1.to(".home-text", {
+      y: 20,
+      visibility: 'visible',
+      autoAlpha: 1.0,
       duration: 1,
       ease: "elastic",
       stagger: 0.1,

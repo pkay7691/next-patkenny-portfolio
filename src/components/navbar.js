@@ -7,8 +7,22 @@ export default function Navbar() {
   const router = useRouter();
 
   const clickHandler = (route) => {
-          router.push(route);
-    }
+    gsap.to(".right", {
+      visibility: 'visible',
+      duration: .2,
+      autoAlpha: 0,
+      x: 50,
+    });
+    gsap.to(".left", {
+      visibility: 'visible',
+      duration: .2,
+      autoAlpha: 0,
+      x: -50,
+      onComplete: () => {
+        router.push(route);
+      },
+    });
+  };
 
   return (
     <div className="navbar">

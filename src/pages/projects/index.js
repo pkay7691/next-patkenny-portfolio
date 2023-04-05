@@ -11,20 +11,19 @@ export default function Projects() {
   useEffect(() => {
     setCurrentProject(projects[0]);
     let buttonTl = gsap.timeline({delay: 1});
-
-   buttonTl.from('.project-button', {x: 100, opacity: 0,  duration: 1, ease: "elastic", stagger: 0.1})
+   buttonTl.to('.project-button', {visibility: 'visible', autoAlpha: 1,  duration: 1, ease: "elastic", x:-50, stagger: 0.1})
   }, []);
 
   useEffect(() => {
     gsap.fromTo(
       "#projects-left-container",
       { autoAlpha: 0},
-      { autoAlpha: 1, duration: 2 , delay: 1.5}
+      { visibility: 'visible',  autoAlpha: 1, duration: 1 , delay: 1.5}
     );
   }, [currentProject]);
 
   const projectSelectHandler = (project) => {
-    gsap.to('#projects-left-container', {autoAlpha: 0, x: -500})
+    gsap.to('#projects-left-container', {autoAlpha: 0, })
     setCurrentProject(project);
   };
 
