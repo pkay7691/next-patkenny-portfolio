@@ -16,7 +16,7 @@ export default function Projects() {
       autoAlpha: 1,
       duration: 1,
       ease: "elastic",
-      x: -50,
+      x: -25,
       stagger: 0.1,
     });
   }, []);
@@ -37,7 +37,7 @@ export default function Projects() {
     gsap.to(`#${project.id}`, { scale: 1.5, duration: 0.5, ease: "elastic" });
     gsap.to("#projects-left-container", {
       visibility: "visible",
-      // x: -50,
+      x: -50,
       autoAlpha: 0,
       onComplete: () => {
         setCurrentProject(project);

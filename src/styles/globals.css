@@ -31,19 +31,21 @@ overflow-x: hidden;
 .navbar {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-content: center;
   padding: 0 2rem;
   height: 5rem;
 }
 
 .navbar-button-group {
   display: flex;
+  align-items: center;
   width: 40%;
   justify-content: space-between;
 }
 
 .nav-bar-button {
   border: none;
+  height: 50px;
   font-size: 1.5vw;
   font-family: "Inter";
   font-weight: bold;
@@ -272,8 +274,8 @@ overflow-x: hidden;
   body {
     overflow: scroll;
   }
-  .navbar {
-    width: 100%;
+  .navbar-button-group {
+    width: 60%;
   }
 
   .home-right-container {
@@ -281,6 +283,9 @@ overflow-x: hidden;
   }
   .home-left-container {
     width: 100%;
+  }
+  .project-button {
+    transform: translate(50px, 0px);
   }
 
 
