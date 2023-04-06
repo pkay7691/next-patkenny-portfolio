@@ -93,7 +93,6 @@ export default function Projects() {
           >
             <source src={currentProject.video} type="video/mp4" />
           </video>
-          <div id="project-icons"></div>
         </div>
         <div className="project-text-container">
           <div className='project-name-container'>
