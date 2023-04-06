@@ -6,12 +6,12 @@ body, html{
 }
 
 html {
-  height: 100vh;
+  height: 100%;
 }
 body {
   overflow: hidden;
+  min-height: 100%;
   box-sizing: border-box;
-  display: flex;
   flex-direction: column;
   min-height: 100%;
   height: 100vh;
@@ -41,6 +41,17 @@ body {
   width: 40%;
   justify-content: space-between;
 }
+
+.nav-bar-button {
+  border: none;
+  font-size: 1.5vw;
+  font-family: "Inter";
+  font-weight: bold;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+}
+
 
 .home-container {
   display: flex;
@@ -161,15 +172,6 @@ body {
   transform: scale(1.1);
 }
 
-.nav-bar-button {
-  border: none;
-  font-size: medium;
-  font-family: "Inter";
-  font-weight: bold;
-  background-color: transparent;
-  cursor: pointer;
-  color: white;
-}
 
 #projects-container {
   display: flex;
@@ -197,7 +199,7 @@ body {
   justify-content: flex-start;
 }
 .project-button {
-  text-align: start;
+  /* text-align: start; */
   border: none;
   margin-top: 50px;
   background-color: transparent;
@@ -208,7 +210,7 @@ body {
 }
 
 .project-video {
-  width: 50vw;
+  width: 80%;
 }
 
 .project-icons {
@@ -266,22 +268,10 @@ body {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
+  body {
+    overflow: scroll;
+  }
 
-  .home-right-container {
-    display: none;
-  }
-  .home-left-container {
-    width: 100%;
-  }
-  .project-button {
-    font-size: 5vw;
-  }
-  .video-links-container {
-    width: 100%;
-  }
-  .project-video {
-    width: 400px;
-  }
 
 }
