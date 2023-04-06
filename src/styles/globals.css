@@ -267,9 +267,7 @@ body {
 
 
 @media screen and (max-width: 600px) {
-  #__next {
-    width: 170vw;
-  }
+
   .home-right-container {
     display: none;
   }
