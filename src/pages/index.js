@@ -17,7 +17,7 @@ export default function Home() {
   useEffect(() => {
 
     console.log('timeline running')
-    const tl1 = gsap.timeline({delay: .5, y: 100});
+    const tl1 = gsap.timeline({delay: .5});
 
 
     tl1.to(".home-text", {
@@ -55,6 +55,7 @@ export default function Home() {
             Chicago kid pursuing his passion for technology.
           </div>
           <div className="line-5 home-text">
+            <a href='https://www.linkedin.com/in/patrick-m-kenny/' target="_blank">
             <Image
             alt="linkedin"
               height="36"
@@ -63,6 +64,8 @@ export default function Home() {
               id="linkedin-white"
               src="/linkedin-white.png"
             />
+            </a>
+            <a href='https://github.com/pkay7691' target="_blank">
             <Image
             alt='github'
               className="hover"
@@ -71,6 +74,7 @@ export default function Home() {
               id="github-white"
               src="/github-white.png"
             />
+            </a>
           </div>
           <div className="line-6 home-text">
             “You miss 100% of the shots you don’t take”

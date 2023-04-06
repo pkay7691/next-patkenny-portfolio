@@ -7,21 +7,23 @@ export default function Navbar() {
   const router = useRouter();
 
   const clickHandler = (route) => {
-    gsap.to(".right", {
-      visibility: 'visible',
-      duration: .2,
-      autoAlpha: 0,
-      x: 50,
-    });
-    gsap.to(".left", {
-      visibility: 'visible',
-      duration: .2,
-      autoAlpha: 0,
-      x: -50,
-      onComplete: () => {
-        router.push(route);
-      },
-    });
+    if (router.route !== route) {
+      gsap.to(".right", {
+        visibility: "visible",
+        duration: 0.2,
+        autoAlpha: 0,
+        x: 50,
+      });
+      gsap.to(".left", {
+        visibility: "visible",
+        duration: 0.2,
+        autoAlpha: 0,
+        x: -50,
+        onComplete: () => {
+          router.push(route);
+        },
+      });
+    }
   };
 
   return (
@@ -35,25 +37,19 @@ export default function Navbar() {
         </button>
 
         <button
-          onClick={(e) => clickHandler("/about")}
-          className="grow nav-bar-button"
-        >
-          About
-        </button>
-
-        <button
           onClick={(e) => clickHandler("/projects")}
           className="grow nav-bar-button"
         >
           Projects
         </button>
 
-        <button
-          onClick={(e) => clickHandler("/contact")}
-          className="grow nav-bar-button"
-        >
-          Contact
-        </button>
+        <a href="/Patrick-Kenny-Resume-3-29.pdf" download>
+          <button className="grow nav-bar-button">Resume</button>
+        </a>
+
+        <a href="mailto: patrickmkenny91@gmail.com">
+          <button className="grow nav-bar-button">Contact</button>
+        </a>
       </div>
     </div>
   );
