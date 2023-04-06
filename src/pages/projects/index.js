@@ -37,7 +37,7 @@ export default function Projects() {
     gsap.to(`#${project.id}`, { scale: 1.5, duration: 0.5, ease: "elastic" });
     gsap.to("#projects-left-container", {
       visibility: "visible",
-      x: -50,
+      // x: -50,
       autoAlpha: 0,
       onComplete: () => {
         setCurrentProject(project);
@@ -83,7 +83,6 @@ export default function Projects() {
   return (
     <div id="projects-container">
       <div ref={projectRef} id="projects-left-container" className="left">
-        <div className="video-links-container">
           <video
             key={currentProject.video}
             className="project-video"
@@ -93,7 +92,6 @@ export default function Projects() {
           >
             <source src={currentProject.video} type="video/mp4" />
           </video>
-        </div>
         <div className="project-text-container">
           <div className='project-name-container'>
           <div id="project-name" className="project-text-container">

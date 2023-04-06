@@ -12,13 +12,13 @@ export default function Navbar() {
         visibility: "visible",
         duration: 0.2,
         autoAlpha: 0,
-        x: 50,
+        // x: 50,
       });
       gsap.to(".left", {
         visibility: "visible",
         duration: 0.2,
         autoAlpha: 0,
-        x: -50,
+        // x: -50,
         onComplete: () => {
           router.push(route);
         },
