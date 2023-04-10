@@ -61,7 +61,7 @@ export default function Projects() {
     {
       id: "catshopper",
       name: "CatShopper",
-      description: "This is a description of project 2",
+      description: "CatShopper is an  ecommerce program that simulates online pet shopping experience.  Users can browse through a catalog of cats, add and remove items from their shopping cart and simulate checkout.",
       image: "https://via.placeholder.com/150",
       github: "https://github.com/pkay7691/grace-shopper-project-pk",
       video: "catshopper.mp4",
@@ -71,7 +71,7 @@ export default function Projects() {
     {
       id: "chatpk",
       name: "Chat-PK",
-      description: "This is a description of project 3",
+      description: "Developed a React app that simulates the Chat-GPT experience using OpenAI’s  API.  Users can chat with a chatbot that has been trained on my personal text messages.  The chatbot will respond to the user’s messages based on the context of the conversation.",
       image: "https://via.placeholder.com/150",
       github: "www.github.com",
       video: "chatpk-demo.mp4",
