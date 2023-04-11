@@ -9,7 +9,8 @@ html {
   height: 100%;
 }
 body {
-overflow-x: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   min-height: 100%;
   box-sizing: border-box;
   flex-direction: column;
@@ -33,7 +34,7 @@ overflow-x: hidden;
   justify-content: flex-end;
   align-content: center;
   padding: 0 2rem;
-  height: 5rem;
+  height: 20vh;
 }
 
 .navbar-button-group {
@@ -58,11 +59,10 @@ overflow-x: hidden;
 .home-container {
   display: flex;
   width: 100%;
-  height: 80%;
+  height: 80vh;
 }
 
 .home-left-container {
-  margin-left: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,11 +80,14 @@ overflow-x: hidden;
 
 #paint-splatter {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  width: 80%;
+  height: auto;
   visibility: hidden;
 }
 #blackwhiteprof {
   position: absolute;
-  max-height: 500px;
+  width: 25%;
+  height: auto;
   visibility: hidden;
 }
 
@@ -103,28 +106,28 @@ overflow-x: hidden;
 
 .line-1.home-text {
   font-weight: 400;
-  font-size: 1em;
-  line-height: 29px;
+  font-size: 2.5vw;
+  /* line-height: 29px; */
 }
 
 .line-2.home-text {
   font-weight: 700;
-  font-size: 3em;
-  line-height: 58px;
+  font-size: 5vw;
+  /* line-height: 58px; */
   overflow: none;
   white-space: nowrap;
 }
 .line-3.home-text {
   font-style: italic;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 3vw;
+  /* line-height: 29px; */
 }
 .line-4.home-text {
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 1.5vw;
+  /* line-height: 18px; */
 }
 .line-5.home-text {
   padding-top: 0.5rem;
@@ -133,7 +136,7 @@ overflow-x: hidden;
   margin-top: 2rem;
   font-style: italic;
   font-weight: 400;
-  font-size: 16px;
+  font-size:1.5vw;
   line-height: 19px;
 }
 
@@ -143,7 +146,7 @@ overflow-x: hidden;
   text-align: right;
   font-style: italic;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 1vw;
   line-height: 15px;
 }
 
@@ -153,8 +156,8 @@ overflow-x: hidden;
   text-align: right;
   font-style: italic;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 1.5vw;
+  /* line-height: 5vh; */
 }
 
 #linkedin-white {
@@ -271,11 +274,11 @@ overflow-x: hidden;
 
 
 @media screen and (max-width: 480px) {
-  body {
-    overflow: scroll;
-  }
   .navbar-button-group {
-    width: 60%;
+    width: 100%;
+  }
+  .nav-bar-button{
+    font-size: 4vw;
   }
 
   .home-right-container {
@@ -283,6 +286,62 @@ overflow-x: hidden;
   }
   .home-left-container {
     width: 100%;
+    justify-content: flex-end;
+  }
+  .line-1.home-text {
+    font-weight: 400;
+    font-size: 5vw;
+    /* line-height: 29px; */
+  }
+  
+  .line-2.home-text {
+    font-weight: 700;
+    font-size: 10vw;
+    /* line-height: 58px; */
+    overflow: none;
+    white-space: nowrap;
+  }
+  .line-3.home-text {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 6vw;
+    /* line-height: 29px; */
+  }
+  .line-4.home-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3vw;
+    /* line-height: 18px; */
+  }
+  .line-5.home-text {
+    padding-top: 0.5rem;
+  }
+  .line-6.home-text {
+    margin-top: 2rem;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 3vw;
+    line-height: 19px;
+  }
+  
+  .line-7.home-text {
+    margin-top: 1rem;
+    margin-right: 7rem;
+    text-align: right;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2vw;
+    line-height: 15px;
+  }
+  
+  .line-8.home-text {
+    margin-top: 0.5rem;
+    margin-right: 6rem;
+    text-align: right;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 3vw;
+    /* line-height: 5vh; */
   }
   .project-button {
     transform: translate(50px, 0px);
