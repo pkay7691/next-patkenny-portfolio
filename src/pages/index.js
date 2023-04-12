@@ -31,13 +31,13 @@ export default function Home() {
 
     tl1.from(
       "#paint-splatter",
-      { x: 100, autoAlpha: 0, duration: 1, ease: "elastic", stagger: 0.1 },
+      { x: 50, autoAlpha: 0, duration: 1, ease: "elastic", stagger: 0.1 },
       "-=1.5"
     );
 
     tl1.from(
       "#blackwhiteprof",
-      { x: -100, autoAlpha: 0, duration: 1, ease: "elastic", stagger: 0.1 },
+      { x: -50, autoAlpha: 0, duration: 1, ease: "elastic", stagger: 0.1 },
       "-=1.5"
     );
   }, []);

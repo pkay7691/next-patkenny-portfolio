@@ -10,7 +10,6 @@ export default function Projects() {
 
   useEffect(() => {
     let buttonTl = gsap.timeline({ delay: 1.0 });
-    buttonTl.set("#project-list", { y: 0 });
     buttonTl.to(".project-button", {
       visibility: "visible",
       autoAlpha: 1,
@@ -22,10 +21,8 @@ export default function Projects() {
   }, [currentProject]);
 
   useEffect(() => {
-    gsap.set("#project-container", { x: 50, autoAlpha: 0 });
     gsap.to("#project-container", {
       visibility: "visible",
-      x: 25,
       autoAlpha: 1,
       duration: 1,
       delay: 1.0,
@@ -33,7 +30,6 @@ export default function Projects() {
   }, [currentProject]);
 
   const projectSelectHandler = (project) => {
-    gsap.set(".project-button", { scale: 1.0 });
     gsap.to(".project-button", {
       autoAlpha: 0,
       duration: 0.3,
