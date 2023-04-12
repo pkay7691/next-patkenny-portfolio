@@ -285,7 +285,10 @@ body {
 }
 
 @media screen and (max-width: 580px) {
-.navbar {
+body {
+  overflow-y: scroll;
+}
+  .navbar {
   width: 100vw;
 }
   #project-container {
