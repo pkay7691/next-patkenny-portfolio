@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Inter&display=swap");
 
-body, html{
-  margin:0;
-  padding:0;
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -16,7 +17,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   height: 100vh;
-  background-image:url('/potential-background.jpg')
+  background-image: url("/potential-background.jpg");
 }
 #__next {
   height: 100vh;
@@ -43,7 +44,10 @@ body {
   width: 40%;
   justify-content: space-between;
 }
-
+.nav-bar-back-button {
+  height: 50px;
+  cursor: pointer;
+}
 .nav-bar-button {
   border: none;
   height: 50px;
@@ -54,7 +58,6 @@ body {
   cursor: pointer;
   color: white;
 }
-
 
 .home-container {
   display: flex;
@@ -95,7 +98,6 @@ body {
   width: 80%;
   top: 100px;
   visibility: hidden;
-
 }
 
 .home-text {
@@ -136,7 +138,7 @@ body {
   margin-top: 2rem;
   font-style: italic;
   font-weight: 400;
-  font-size:1.5vw;
+  font-size: 1.5vw;
   line-height: 19px;
 }
 
@@ -177,45 +179,50 @@ body {
   transform: scale(1.1);
 }
 
-
 #projects-container {
   display: flex;
+
   width: 100%;
   height: 100%;
   visibility: hidden;
 }
-#projects-left-container {
+
+#project-container {
+  position: relative;
+  right: 25px;
+  visibility: hidden;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 80%;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 80vh;
   align-items: center;
 }
 
-#projects-right-container {
+#project-list {
+  position: relative;
   display: flex;
-  width: 20%;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 80vh;
+  bottom: 75px;
+  align-items: center;
 }
 
-#project-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
 .project-button {
-  /* text-align: start; */
-  border: none;
-  margin-top: 50px;
-  background-color: transparent;
-  font-style: italic;
-  font-size: 2vw;
-  cursor: pointer;
-  color: white;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 5px;
+  height: 70%;
+  width: 25%;
+ 
+
 }
 
 .project-video {
-  width: 60%;
+  width: 40%;
 }
 
 .project-icons {
@@ -245,39 +252,68 @@ body {
 .project-text-container {
   display: flex;
   flex-direction: column;
-  width: 75%;
-  /* margin-left: 50px; */
   color: white;
+  width: 40%;
   font-family: "Inter";
 }
 .project-name-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
 }
 
 #project-name {
-  font-size: 3vw;
+  font-size: 6vw;
   font-weight: bold;
-  width: auto;
+  width: 100%;
   margin-right: 10px;
 }
 #project-description {
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   font-weight: lighter;
+  width: 100%;
 }
 #project-technologies {
-  font-size: 1vw;
+  font-size: 1rem;
   font-weight: lighter;
   font-style: italic;
+  width: 100%;
 }
 
+@media screen and (max-width: 580px) {
 
-@media screen and (max-width: 480px) {
+  #project-container {
+    flex-direction: column;
+    padding-left: 10%;
+   padding-right: 10%; 
+  }
+  .nav-bar-back-button {
+    align-self: start; 
+  }
+  .project-text-container {
+    width: 100%;
+  }
+  .project-video {
+    width: 100%;
+  }
+  #project-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-logo {
+    height: 100%;
+  }
+  .project-button {
+    display: flex;
+    height: 30%;
+    width: 50%;
+  }
   .navbar-button-group {
     width: 100%;
   }
-  .nav-bar-button{
+  .nav-bar-button {
     font-size: 4vw;
   }
 
@@ -293,7 +329,7 @@ body {
     font-size: 5vw;
     /* line-height: 29px; */
   }
-  
+
   .line-2.home-text {
     font-weight: 700;
     font-size: 10vw;
@@ -323,7 +359,7 @@ body {
     font-size: 3vw;
     line-height: 19px;
   }
-  
+
   .line-7.home-text {
     margin-top: 1rem;
     margin-right: 7rem;
@@ -333,7 +369,7 @@ body {
     font-size: 2vw;
     line-height: 15px;
   }
-  
+
   .line-8.home-text {
     margin-top: 0.5rem;
     margin-right: 6rem;
@@ -343,9 +379,4 @@ body {
     font-size: 3vw;
     /* line-height: 5vh; */
   }
-  .project-button {
-    transform: translate(50px, 0px);
-  }
-
-
 }
